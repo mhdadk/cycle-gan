@@ -150,8 +150,5 @@ if __name__ == '__main__':
     discriminator = CycleGANDiscriminator(x.shape[1])
     
     y = discriminator(x)
-        
-        
     
-        
         

@@ -14,18 +14,22 @@ from PIL import Image
 
 from glob import glob
 
-from cyclegan_gen import CycleGANGenerator
+from networks.generator import CycleGANGenerator
 
-from cyclegan_disc import CycleGANDiscriminator
+from networks.discriminator import CycleGANDiscriminator
 
-from init_weights import init_weights
+from utils.init_weights import init_weights
 
-from image_buffer import ImageBuffer
+from utils.image_buffer import ImageBuffer
 
+from utils.ImageDataset import ImageDataset
 
-
-def get_dataloader(img_dir,img_transforms,mode = 'train',batch_size = 8,
-                   aligned = True, shuffle = True):
+def get_dataloader(img_dir,
+                   img_transforms,
+                   mode = 'train',
+                   batch_size = 8,
+                   aligned = True,
+                   shuffle = True):
     
     dataset = ImageDataset(img_dir = img_dir,
                            transforms = img_transforms,

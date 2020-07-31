@@ -45,9 +45,6 @@ class ImageBuffer():
                 
                 p = random.uniform(0,1)
                 
-                # TODO: try using from_buffer = 1 then 1 - from_buffer instead
-                # of this
-                
                 if p > 0.5:
                 
                     # randint is inclusive

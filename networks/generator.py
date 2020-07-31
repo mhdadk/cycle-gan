@@ -195,14 +195,14 @@ if __name__ == '__main__':
     
     """
     
-    nn.Conv2d expects an input shape of (N,in_channels,H,W), where:
+    nn.Conv2d expects an input shape of (N,C,H,W), where:
         
         N = batch size
-        in_channels = number of input channels
+        C = number of input channels
         H = image height (number of rows)
         W = image width (number of columns)
     
-    in this case, for input x, N = 8, in_channels = 128, H = 256, W = 256
+    in this case, for input x, N = 8, C = 128, H = 256, W = 256
     
     NOTE: a batch of 8 256 x 256 images requires too much memory, will throw
     error. Use a batch size of 1 instead.
